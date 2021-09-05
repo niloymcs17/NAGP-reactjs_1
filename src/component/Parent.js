@@ -10,13 +10,18 @@ export class Parent extends Component {
       blogs: blog?.length > 0 ? blog : [],
       comments: comment?.length > 0 ? comment : [],
     };
+    this.updateUIblog = this.updateUIblog.bind(this);
     console.log(this.state);
   }
 
+  updateUIblog(value) {
+    console.log(value);
+    this.setState({blogs: value});
+  }
   render() {
     return (
       <div>
-        <Forms></Forms>
+        <Forms updateView={this.updateUIblog}></Forms>
         {this.state.blogs.map((blog) => (
           <div key={blog.id}>
             <h1>Blog: {blog.title}</h1>

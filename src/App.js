@@ -39,7 +39,7 @@ function App() {
       isActive: false,
     },
   ];
-  localStorage.setItem('blogs',JSON.stringify(blogs));
+  // localStorage.setItem('blogs',JSON.stringify(blogs));
   localStorage.setItem('comments',JSON.stringify(comments));
   return (
     <div>
