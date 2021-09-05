@@ -7,7 +7,7 @@ function Child(props) {
     return (
         <div>
             { comments.map((cmt) => {
-                if (cmt.isActive && cmt.blogId === id ) {
+                if (cmt.isActive && cmt.blogId == id ) {
                     return ( <p key={cmt.id}> {cmt.comment} - ID={cmt.id} </p>)
                 } else {
                     return ''
